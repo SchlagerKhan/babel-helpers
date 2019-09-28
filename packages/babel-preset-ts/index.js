@@ -1,15 +1,15 @@
 const defaultTargets = '> 0.25%, not dead';
 const defaultExtentions = ['.js', 'ts', '.tsx'];
 
-module.exports = function({
-	// prettier-ignore
-    targets = defaultTargets,
-    extensions = defaultExtentions,
-    alias = {},
-    ...otherOptions,
-}) {
-    const options = {targets, extensions, alias, ...otherOptions};
-    
+module.exports = function(opts) {
+	const options = Object.assign(
+		{
+			targets: defaultTargets,
+			extensions: defaultExtentions,
+		},
+		opts,
+	);
+
 	return {
 		presets: [
 			// prettier-ignore
