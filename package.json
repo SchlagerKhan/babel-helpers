@@ -1,0 +1,13 @@
+{
+	"private": true,
+	"name": "@schlagerkhan/babel-preset",
+	"version": "0.0.1",
+	"main": "index.js",
+	"license": "MIT",
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"lerna": "^3.16.4"
+	}
+}
