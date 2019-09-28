@@ -1,10 +1,13 @@
 {
-  "name": "@schlagerkhan/babel-preset-ts",
-  "version": "0.0.1",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@babel/preset-typescript": "^7.6.0",
-    "@schlagerkhan/babel-preset-js": "^0.0.1"
-  }
+	"name": "@schlagerkhan/babel-preset-ts",
+	"version": "0.0.1",
+	"main": "index.js",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"@babel/preset-typescript": "^7.6.0",
+		"@schlagerkhan/babel-preset-js": "^0.0.1"
+	}
 }
