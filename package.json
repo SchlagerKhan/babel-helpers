@@ -11,6 +11,7 @@
 		"deploy": "npx lerna publish from-package"
 	},
 	"devDependencies": {
+		"@schlagerkhan/eslint-fuckit-js": "^0.2.15",
 		"lerna": "^3.16.4"
 	}
 }
