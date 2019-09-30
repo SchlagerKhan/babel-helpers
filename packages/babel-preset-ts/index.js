@@ -1,7 +1,7 @@
 const defaultTargets = '> 0.25%, not dead';
-const defaultExtentions = ['.js', 'ts', '.tsx'];
+const defaultExtentions = ['.js', '.ts', '.tsx'];
 
-module.exports = function(opts) {
+module.exports = function(api, opts) {
 	const options = Object.assign(
 		{
 			targets: defaultTargets,

@@ -1,13 +1,15 @@
 const defaultTargets = '> 0.25%, not dead';
 const defaultExtensions = ['.js'];
 
-module.exports = function({
-	// prettier-ignore
-	targets = defaultTargets,
-	extensions = defaultExtensions,
-	alias = {},
-	includeMetadata,
-}) {
+module.exports = function(api, opts) {
+	const {
+		// prettier-ignore
+		targets = defaultTargets,
+		extensions = defaultExtensions,
+		alias = {},
+		includeMetadata,
+	} = opts;
+
 	const plugins = [
 		'@babel/plugin-transform-runtime',
 		'@babel/plugin-proposal-optional-chaining',
