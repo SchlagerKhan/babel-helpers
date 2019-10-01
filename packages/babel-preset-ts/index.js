@@ -6,6 +6,7 @@ module.exports = function(api, opts) {
 		{
 			targets: defaultTargets,
 			extensions: defaultExtentions,
+			includeMetadata: true,
 		},
 		opts,
 	);
