@@ -8,6 +8,7 @@ module.exports = function(api, opts) {
 		extensions = defaultExtensions,
 		alias = {},
 		includeMetadata,
+		includeStyledComponents,
 	} = opts;
 
 	const plugins = [
@@ -35,6 +36,10 @@ module.exports = function(api, opts) {
 
 	if (includeMetadata) {
 		plugins.push('babel-plugin-transform-typescript-metadata');
+	}
+
+	if (includeStyledComponents) {
+		plugins.push('babel-plugin-styled-components');
 	}
 
 	return {
