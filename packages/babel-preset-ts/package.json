@@ -1,6 +1,6 @@
 {
 	"name": "@schlagerkhan/babel-preset-ts",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"main": "index.js",
 	"license": "MIT",
 	"publishConfig": {
@@ -8,6 +8,6 @@
 	},
 	"dependencies": {
 		"@babel/preset-typescript": "^7.6.0",
-		"@schlagerkhan/babel-preset-js": "^0.0.5"
+		"@schlagerkhan/babel-preset-js": "^0.0.6"
 	}
 }
