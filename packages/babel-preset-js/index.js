@@ -1,5 +1,7 @@
 const defaultTargets = "> 0.25%, not dead";
-const defaultExtensions = [".js"];
+const defaultExtensions = [".js", ".jsx"];
+const defaultRoot = ["."];
+const defaultAlias = {};
 
 const IS_DEV = process.env.NODE_ENV === "development";
 
@@ -8,9 +10,10 @@ module.exports = function(api, opts) {
     // prettier-ignore
     targets = defaultTargets,
     extensions = defaultExtensions,
-    alias = {},
+    root = defaultRoot,
+    alias = defaultAlias,
     includeMetadata,
-    includeStyledComponents
+    includeStyledComponents = true
   } = opts;
 
   const plugins = [
@@ -19,14 +22,7 @@ module.exports = function(api, opts) {
     "@babel/plugin-proposal-export-default-from",
     ["@babel/plugin-proposal-decorators", { legacy: true }],
     ["@babel/plugin-proposal-class-properties", { loose: true }],
-    [
-      "babel-plugin-module-resolver",
-      {
-        root: ["."],
-        extensions,
-        alias
-      }
-    ],
+    ["babel-plugin-module-resolver", { root, extensions, alias }],
     [
       "babel-plugin-import",
       {
