@@ -1,6 +1,8 @@
 # PUBLISH
 
-`lerna publish --scope packages/*`
+`lerna publish`
+
+<!-- `lerna publish --scope packages/*` -->
 
 # VERSION
 

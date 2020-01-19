@@ -12,6 +12,7 @@
 	},
 	"devDependencies": {
 		"@schlagerkhan/eslint-fuckit-js": "^0.2.15",
-		"lerna": "^3.16.4"
+		"lerna": "^3.16.4",
+		"prettier": "^1.19.1"
 	}
 }
