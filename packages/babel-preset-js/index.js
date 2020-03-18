@@ -34,7 +34,7 @@ module.exports = function(api, opts) {
   ];
 
   if (includeMetadata) {
-    plugins.push("babel-plugin-transform-typescript-metadata");
+    plugins.push("transform-typescript-metadata");
   }
 
   if (includeStyledComponents) {
