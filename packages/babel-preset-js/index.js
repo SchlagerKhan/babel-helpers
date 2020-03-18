@@ -13,7 +13,8 @@ module.exports = function(api, opts) {
     root = defaultRoot,
     alias = defaultAlias,
     includeMetadata,
-    includeStyledComponents = true
+    includeStyledComponents = true,
+    envOpts = {}
   } = opts;
 
   const plugins = [
@@ -49,7 +50,7 @@ module.exports = function(api, opts) {
   return {
     presets: [
       // prettier-ignore
-      ['@babel/env', { targets }],
+      ['@babel/env', { targets, ...envOpts }],
       "@babel/react"
     ],
     plugins
