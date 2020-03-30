@@ -1,9 +1,10 @@
 {
 	"private": true,
 	"name": "@schlagerkhan/babel-helpers",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"main": "index.js",
 	"license": "MIT",
+	"prettier": "@schlagerkhan/prettier-config",
 	"workspaces": [
 		"packages/*"
 	],
@@ -12,7 +13,8 @@
 	},
 	"devDependencies": {
 		"@schlagerkhan/eslint-fuckit-js": "^0.2.15",
-		"lerna": "^3.16.4",
-		"prettier": "^1.19.1"
+		"@schlagerkhan/prettier-config": "^0.0.2",
+		"lerna": "^3.20.2",
+		"prettier": "^2.0.2"
 	}
 }
