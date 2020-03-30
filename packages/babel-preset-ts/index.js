@@ -1,21 +1,23 @@
 const defaultTargets = '> 0.25%, not dead';
 const defaultExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-module.exports = function(api, opts) {
-	const options = Object.assign(
-		{
-			targets: defaultTargets,
-			extensions: defaultExtensions,
-			includeMetadata: true,
-		},
-		opts,
-	);
+const defaultOpts = {
+	targets: defaultTargets,
+	extensions: defaultExtensions,
+};
+
+module.exports = function (api, opts) {
+	const { includeMetadata = true } = opts;
+
+	const options = Object.assign(defaultOpts, opts);
+	const plugins = [];
+
+	if (includeMetadata) {
+		plugins.push('transform-typescript-metadata');
+	}
 
 	return {
-		presets: [
-			// prettier-ignore
-			['@schlagerkhan/js', options],
-			'@babel/typescript',
-		],
+		presets: ['@babel/typescript', ['@schlagerkhan/base', options]],
+		plugins,
 	};
 };
