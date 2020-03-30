@@ -11,5 +11,8 @@
 		"@schlagerkhan/babel-preset-base": "^0.1.3",
 		"babel-plugin-transform-typescript-metadata": "^0.3.0"
 	},
-	"gitHead": "15d12a6066b0965c831d18d291580b77964af636"
+	"gitHead": "15d12a6066b0965c831d18d291580b77964af636",
+	"devDependencies": {
+		"@babel/core": "^7.9.0"
+	}
 }
