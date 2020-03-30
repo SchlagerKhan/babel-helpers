@@ -9,7 +9,7 @@
 		"packages/*"
 	],
 	"scripts": {
-		"deploy": "npx lerna publish"
+		"deploy": "npx lerna version && npx lerna publish"
 	},
 	"devDependencies": {
 		"@schlagerkhan/eslint-fuckit-js": "^0.2.15",
