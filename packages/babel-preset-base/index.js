@@ -1,52 +1,55 @@
-const defaultTargets = "> 0.25%, not dead";
+const defaultTargets = '> 0.25%, not dead';
 
-const IS_DEV = process.env.NODE_ENV === "development";
+const IS_DEV = process.env.NODE_ENV === 'development';
 
 module.exports = function (api, opts) {
-  const {
-    // prettier-ignore
-    targets = defaultTargets,
-    envOpts = {},
+	const {
+		// prettier-ignore
+		targets = defaultTargets,
+		envOpts = {},
 
-    resolver = {},
-    includeImport = true,
-    includeStyledComponents = true
-  } = opts;
+		resolver = {},
+		includeImport = true,
+		includeStyledComponents = true,
+	} = opts;
 
-  const { root, alias, extensions } = resolver;
+	const { root, alias, extensions } = resolver;
 
-  const plugins = [];
+	const plugins = [
+		['@babel/plugin-proposal-decorators', { legacy: true }],
+		['@babel/plugin-proposal-class-properties', { loose: true }],
+	];
 
-  if (root || extensions || alias) {
-    plugins.push(["babel-plugin-module-resolver", { root, extensions, alias }]);
-  }
+	if (root || extensions || alias) {
+		plugins.push(['babel-plugin-module-resolver', { root, extensions, alias }]);
+	}
 
-  if (includeImport) {
-    plugins.push([
-      "babel-plugin-import",
-      {
-        libraryName: "antd",
-        style: "css"
-      }
-    ]);
-  }
+	if (includeImport) {
+		plugins.push([
+			'babel-plugin-import',
+			{
+				libraryName: 'antd',
+				style: 'css',
+			},
+		]);
+	}
 
-  if (includeStyledComponents) {
-    plugins.push([
-      "babel-plugin-styled-components",
-      {
-        displayName: IS_DEV,
-        minify: !IS_DEV
-      }
-    ]);
-  }
+	if (includeStyledComponents) {
+		plugins.push([
+			'babel-plugin-styled-components',
+			{
+				displayName: IS_DEV,
+				minify: !IS_DEV,
+			},
+		]);
+	}
 
-  return {
-    // prettier-ignore
-    presets: [
+	return {
+		// prettier-ignore
+		presets: [
         ["@babel/env", { targets, ...envOpts }],
         "@babel/react",
       ],
-    plugins
-  };
+		plugins,
+	};
 };
