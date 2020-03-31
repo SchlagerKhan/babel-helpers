@@ -1,6 +1,6 @@
 {
 	"name": "@schlagerkhan/babel-preset-js",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"main": "index.js",
 	"license": "MIT",
 	"publishConfig": {
@@ -8,7 +8,7 @@
 	},
 	"dependencies": {
 		"@babel/plugin-proposal-export-default-from": "^7.8.3",
-		"@schlagerkhan/babel-preset-base": "^0.1.4"
+		"@schlagerkhan/babel-preset-base": "^0.1.5"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.9.0"
