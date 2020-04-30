@@ -11,6 +11,6 @@
 		"@schlagerkhan/babel-preset-base": "^0.1.5"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.9.0"
+		"@babel/core": "^7.9.6"
 	}
 }
