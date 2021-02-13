@@ -7,11 +7,11 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@babel/preset-typescript": "^7.9.0",
+		"@babel/preset-typescript": "^7.12.16",
 		"@schlagerkhan/babel-preset-base": "^0.1.6",
 		"babel-plugin-transform-typescript-metadata": "^0.3.0"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.9.6"
+		"@babel/core": "^7.12.16"
 	}
 }
